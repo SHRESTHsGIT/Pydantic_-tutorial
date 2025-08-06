@@ -10,7 +10,7 @@ class Patient(BaseModel):
     married: bool
     allergies: List[str]
     contact_details: Dict[str, str]
-
+    
     @field_validator('email')# a new method to validate email with decorator field_validator in brackets we can pass the field name to validate
     @classmethod#to show this is a class method
     def email_validator(cls, value):# our custom validation method
